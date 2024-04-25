@@ -109,6 +109,10 @@ it('convert phpunit class method to pest function call', function () {
 
             public function testFalseIsFalse() {}
 
+            public function testPHP8() {}
+
+            public function testPHP_IS_Great() {}
+
             /** @test */
             public function it_works() {}
         }
@@ -119,6 +123,8 @@ it('convert phpunit class method to pest function call', function () {
     expect($convertedCode)
         ->toContain("test('true is true', function () {")
         ->toContain("test('false is false', function () {")
+        ->toContain("test('php8', function () {")
+        ->toContain("test('php is great', function () {")
         ->toContain("it('works', function () {")
         ->not->toContain('/** @test */');
 });
