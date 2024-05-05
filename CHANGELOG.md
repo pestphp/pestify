@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [v2.6.1 (2024-05-05)](https://github.com/pestphp/pest-plugin-drift/compare/v2.6.0...v2.6.1)
+
+### Changed
+
+- Improve function name conversion to description ([#43](https://github.com/pestphp/pest-plugin-drift/pull/43))
+
 ## [v2.6.0 (2024-03-19)](https://github.com/pestphp/pest-plugin-drift/compare/v2.5.0...v2.6.0)
 
 ### Dependency Updates
