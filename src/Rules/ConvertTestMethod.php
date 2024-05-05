@@ -78,7 +78,7 @@ final class ConvertTestMethod extends AbstractConvertClassMethod
     private function methodNameToDescription(string $name): string
     {
         $newName = (string) preg_replace(
-            ['/^(test|it)/', '/_/', '/(?=[A-Z])/'],
+            ['/^(test|it)/', '/(?<![A-Z]|_)(?=[A-Z])/', '/_(?<![A-Z])/'],
             ['', ' ', ' '],
             $name
         );
