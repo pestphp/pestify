@@ -24,7 +24,7 @@ final class Finder implements FinderInterface
      */
     public function __construct(string|array $in)
     {
-        $this->baseFinder = (new BaseFinder())
+        $this->baseFinder = (new BaseFinder)
             ->files()
             ->name('*Test.php') // @todo Infer this from the configuration...
             ->exclude('vendor')

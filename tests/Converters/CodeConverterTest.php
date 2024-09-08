@@ -4,7 +4,7 @@ use Pest\Drift\Converters\CodeConverterFactory;
 
 function codeConverter()
 {
-    return (new CodeConverterFactory())->codeConverter();
+    return (new CodeConverterFactory)->codeConverter();
 }
 
 it('remove namespace', function () {

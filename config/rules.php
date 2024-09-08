@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-$classMethodAnalyzer = new \Pest\Drift\Analyzer\ClassMethodAnalyzer();
-$nodeFinder = new \PhpParser\NodeFinder();
-$phpDocTagExtractor = new \Pest\Drift\Extractor\PhpDocTagExtractor();
+$classMethodAnalyzer = new \Pest\Drift\Analyzer\ClassMethodAnalyzer;
+$nodeFinder = new \PhpParser\NodeFinder;
+$phpDocTagExtractor = new \Pest\Drift\Extractor\PhpDocTagExtractor;
 
 return [
     new \Pest\Drift\NodeDecorator\PhpDocTagDecorator($phpDocTagExtractor),
     new \Pest\Drift\NodeDecorator\DataProviderDecorator($nodeFinder, $phpDocTagExtractor, $classMethodAnalyzer),
-    new \Pest\Drift\Rules\RemoveClass(),
-    new \Pest\Drift\Rules\RemoveNamespace(),
-    new \Pest\Drift\Rules\ExtendsToUses(),
-    new \Pest\Drift\Rules\RemoveExtendsUse(),
-    new \Pest\Drift\Rules\RemoveTraitsUse(),
+    new \Pest\Drift\Rules\RemoveClass,
+    new \Pest\Drift\Rules\RemoveNamespace,
+    new \Pest\Drift\Rules\ExtendsToUses,
+    new \Pest\Drift\Rules\RemoveExtendsUse,
+    new \Pest\Drift\Rules\RemoveTraitsUse,
     new \Pest\Drift\Rules\ConvertTestMethod($classMethodAnalyzer, [
-        new \Pest\Drift\Rules\AttributeAnnotations\ConvertDataProvider(),
-        new \Pest\Drift\Rules\AttributeAnnotations\ConvertDepends(),
-        new \Pest\Drift\Rules\AttributeAnnotations\ConvertGroup(),
+        new \Pest\Drift\Rules\AttributeAnnotations\ConvertDataProvider,
+        new \Pest\Drift\Rules\AttributeAnnotations\ConvertDepends,
+        new \Pest\Drift\Rules\AttributeAnnotations\ConvertGroup,
     ]),
     new \Pest\Drift\Rules\ConvertNonTestMethod($classMethodAnalyzer),
     new \Pest\Drift\Rules\ConvertMethodCall(
@@ -36,8 +36,8 @@ return [
     new \Pest\Drift\Rules\SetUpBeforeClassToBeforeAll($classMethodAnalyzer),
     new \Pest\Drift\Rules\TearDownToAfterEach($classMethodAnalyzer),
     new \Pest\Drift\Rules\TearDownAfterClassToAfterAll($classMethodAnalyzer),
-    new \Pest\Drift\Rules\RemoveProperties(),
-    new \Pest\Drift\Rules\TraitToUses(),
+    new \Pest\Drift\Rules\RemoveProperties,
+    new \Pest\Drift\Rules\TraitToUses,
     new \Pest\Drift\Rules\AddMissingUse(
         new \Pest\Drift\Parser\NodeFinder\MissingUseFinder(
             new \Pest\Drift\Parser\NodeFinder\UseFinder($nodeFinder),

@@ -20,9 +20,7 @@ final class DataProviderDecorator extends NodeVisitorAbstract
      */
     private array $dataProviders = [];
 
-    public function __construct(private readonly NodeFinder $nodeFinder, private readonly PhpDocTagExtractor $phpDocTagExtractor, private readonly ClassMethodAnalyzer $classMethodAnalyzer)
-    {
-    }
+    public function __construct(private readonly NodeFinder $nodeFinder, private readonly PhpDocTagExtractor $phpDocTagExtractor, private readonly ClassMethodAnalyzer $classMethodAnalyzer) {}
 
     public function beforeTraverse(array $nodes)
     {

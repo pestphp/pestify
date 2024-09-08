@@ -23,15 +23,15 @@ final class CodeConverterFactory
     {
         $visitors = require __DIR__.'/../../config/rules.php';
 
-        $nodeTraverser = new NodeTraverser();
-        $parser = (new ParserFactory())->createForNewestSupportedVersion();
-        $prettyPrinter = new Standard();
+        $nodeTraverser = new NodeTraverser;
+        $parser = (new ParserFactory)->createForNewestSupportedVersion();
+        $prettyPrinter = new Standard;
 
-        $nodeTraverser->addVisitor(new NodeConnectingVisitor());
+        $nodeTraverser->addVisitor(new NodeConnectingVisitor);
         $nodeTraverser->addVisitor(new NameResolver(null, [
             'replaceNodes' => false,
         ]));
-        $nodeTraverser->addVisitor(new CloningVisitor());
+        $nodeTraverser->addVisitor(new CloningVisitor);
 
         foreach ($visitors as $visitor) {
             $nodeTraverser->addVisitor($visitor);

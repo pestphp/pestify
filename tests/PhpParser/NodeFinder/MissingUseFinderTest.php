@@ -12,8 +12,8 @@ use PhpParser\NodeFinder;
 function missingUseFinder()
 {
     return new MissingUseFinder(
-        new UseFinder(new NodeFinder()),
-        new NameFinder(new NodeFinder()),
+        new UseFinder(new NodeFinder),
+        new NameFinder(new NodeFinder),
     );
 }
 

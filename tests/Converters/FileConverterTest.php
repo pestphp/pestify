@@ -14,7 +14,7 @@ it('create converted file', function () {
 
     $file = new File($splFileInfo);
 
-    $codeConverter = (new CodeConverterFactory())->codeConverter();
+    $codeConverter = (new CodeConverterFactory)->codeConverter();
 
     (new FileConverter($codeConverter, tmpDir('results')))->convert($file);
 

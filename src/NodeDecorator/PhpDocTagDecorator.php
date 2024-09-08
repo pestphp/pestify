@@ -12,9 +12,7 @@ use PhpParser\NodeVisitorAbstract;
 
 final class PhpDocTagDecorator extends NodeVisitorAbstract
 {
-    public function __construct(private readonly PhpDocTagExtractor $phpDocTagExtractor)
-    {
-    }
+    public function __construct(private readonly PhpDocTagExtractor $phpDocTagExtractor) {}
 
     public function enterNode(Node $node)
     {

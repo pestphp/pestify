@@ -17,7 +17,7 @@ final class RemoveTraitsUse extends AbstractRemoveUse
      */
     protected function useToRemove(array $nodes): array
     {
-        $nodeFinder = new NodeFinder();
+        $nodeFinder = new NodeFinder;
 
         /** @var array<int, TraitUse> $traitsUse */
         $traitsUse = $nodeFinder->findInstanceOf($nodes, TraitUse::class);

@@ -68,7 +68,7 @@ final class Plugin implements HandlesArguments
         $directory = rtrim($directory, '/');
 
         $finder = new Finder($directory);
-        $codeConverterFactory = (new CodeConverterFactory());
+        $codeConverterFactory = (new CodeConverterFactory);
         $directoryConverter = new DirectoryConverter(new FileConverter($codeConverterFactory->codeConverter(), $directory));
 
         $this->output->write('  ');

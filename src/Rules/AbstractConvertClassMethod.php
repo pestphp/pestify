@@ -16,8 +16,7 @@ abstract class AbstractConvertClassMethod extends NodeVisitorAbstract
 {
     public function __construct(
         protected ClassMethodAnalyzer $classMethodAnalyzer,
-    ) {
-    }
+    ) {}
 
     /**
      * {@inheritDoc}

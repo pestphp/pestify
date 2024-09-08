@@ -24,8 +24,7 @@ final class ConvertMethodCall extends AbstractConvertMethodCall
 
     public function __construct(
         private readonly NonTestMethodFinderInterface $nonTestMethodFinder,
-    ) {
-    }
+    ) {}
 
     /**
      * {@inheritDoc}

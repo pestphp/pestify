@@ -99,7 +99,7 @@ final class ClassMethodAnalyzer implements ClassMethodAnalyzerInterface
     {
         return array_reduce($arguments, function ($values, $argument) {
             if ($argument->value instanceof Scalar\String_) {
-                $values[] = $argument->value->value;
+                $values[] = $argument->value->value; // @phpstan-ignore-line
             }
 
             return $values;

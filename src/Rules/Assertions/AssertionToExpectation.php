@@ -7,6 +7,4 @@ namespace Pest\Drift\Rules\Assertions;
 /**
  * @internal
  */
-final class AssertionToExpectation extends AbstractAssertionToExpectation
-{
-}
+final class AssertionToExpectation extends AbstractAssertionToExpectation {}

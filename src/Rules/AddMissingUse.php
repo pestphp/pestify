@@ -17,8 +17,7 @@ final class AddMissingUse extends NodeVisitorAbstract
 {
     public function __construct(
         private readonly MissingUseFinderInterface $missingUseFinder,
-    ) {
-    }
+    ) {}
 
     /**
      * {@inheritDoc}

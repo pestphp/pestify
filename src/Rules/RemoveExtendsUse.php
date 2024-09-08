@@ -17,7 +17,7 @@ final class RemoveExtendsUse extends AbstractRemoveUse
      */
     protected function useToRemove(array $nodes): array
     {
-        $nodeFinder = new NodeFinder();
+        $nodeFinder = new NodeFinder;
 
         /** @var array<int, Class_> $classesWithExtends */
         $classesWithExtends = $nodeFinder->findInstanceOf($nodes, Class_::class);

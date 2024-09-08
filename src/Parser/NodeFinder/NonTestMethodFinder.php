@@ -15,8 +15,7 @@ final class NonTestMethodFinder implements NonTestMethodFinderInterface
     public function __construct(
         private readonly ClassMethodFinderInterface $classMethodFinder,
         private readonly ClassMethodAnalyzerInterface $classMethodAnalyzer,
-    ) {
-    }
+    ) {}
 
     public function find(array $nodes): array
     {

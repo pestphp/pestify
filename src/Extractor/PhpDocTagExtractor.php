@@ -18,11 +18,11 @@ final class PhpDocTagExtractor
 
         foreach ($comments as $comment) {
             preg_match_all('/(@[^\s\n]*) ?([^\s\n]*) *$/m', $comment->getText(), $matches);
-            $itemsCount = is_countable($matches[1]) ? count($matches[1]) : 0;
+            $itemsCount = is_countable($matches[1]) ? count($matches[1]) : 0; // @phpstan-ignore-line
 
             for ($i = 0; $i < $itemsCount; $i++) {
-                $key = (string) $matches[1][$i];
-                $value = (string) $matches[2][$i];
+                $key = $matches[1][$i];
+                $value = $matches[2][$i];
 
                 if (! array_key_exists($key, $tags)) {
                     $tags[$key] = [];

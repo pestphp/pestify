@@ -23,8 +23,7 @@ abstract class AbstractAssertionToExpectation extends AbstractConvertMethodCall
         protected string $oldName,
         protected string $newName,
         protected int $argumentCount,
-    ) {
-    }
+    ) {}
 
     protected function apply(MethodCall $methodCall): int|Node|array|null
     {

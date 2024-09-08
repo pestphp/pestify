@@ -38,7 +38,7 @@ final class TraitToUses extends NodeVisitorAbstract
 
         return array_merge(
             $usesStatements,
-            [new Node\Stmt\Nop()]
+            [new Node\Stmt\Nop]
         );
     }
 }

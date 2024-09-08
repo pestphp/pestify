@@ -24,8 +24,7 @@ final class ConvertStaticCall extends AbstractConvertStaticCall
 
     public function __construct(
         private readonly NonTestMethodFinderInterface $nonTestMethodFinder,
-    ) {
-    }
+    ) {}
 
     /**
      * {@inheritDoc}
