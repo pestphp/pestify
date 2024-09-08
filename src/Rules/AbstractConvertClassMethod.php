@@ -29,6 +29,8 @@ abstract class AbstractConvertClassMethod extends NodeVisitorAbstract
         if (! $this->filter($node)) {
             return null;
         }
+
+        return null;
     }
 
     /**

@@ -29,6 +29,8 @@ abstract class AbstractConvertMethodCall extends NodeVisitorAbstract
         if ($node instanceof MethodCall) {
             return $this->apply($node);
         }
+
+        return null;
     }
 
     /**

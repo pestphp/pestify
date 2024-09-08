@@ -21,5 +21,7 @@ final class PhpDocTagDecorator extends NodeVisitorAbstract
         }
 
         $node->setAttribute(AttributeKey::PHP_DOC_TAGS, $this->phpDocTagExtractor->fromComments($node->getComments()));
+
+        return null;
     }
 }

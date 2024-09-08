@@ -49,5 +49,7 @@ final class DataProviderDecorator extends NodeVisitorAbstract
         }
 
         $node->setAttribute(AttributeKey::IS_DATA_PROVIDER, in_array($node->name->toString(), $this->dataProviders, true));
+
+        return null;
     }
 }
