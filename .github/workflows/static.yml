@@ -25,8 +25,8 @@ jobs:
     - name: Install Dependencies
       run: composer update --prefer-stable --no-interaction --no-progress --ansi
 
-    - name: Refacto
-      run: composer test:refacto
+    - name: Refactor
+      run: composer test:refactor
 
     - name: Types
       run: composer test:types
